@@ -1,0 +1,7 @@
+flask
+passlib
+argon2-cffi
+bcrypt
+pyotp
+requests
+gunicorn

@@ -90,5 +90,6 @@ def login():
         return jsonify(generic_error), 401
 
 if __name__ == '__main__':
-    print("--- APP LOGIN DEMO AN TOÀN DÙNG ARGON2ID ---")
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    # Lấy cổng PORT do Render tự động cấp, nếu chạy ở máy local thì mặc định là 5000
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port, debug=False)
